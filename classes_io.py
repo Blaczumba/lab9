@@ -1,7 +1,6 @@
 from classes import Person, Database
 
 import csv
-import yaml
 
 
 class MalformedCSVError(Exception):
