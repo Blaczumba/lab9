@@ -1,5 +1,4 @@
 from datetime import date
-import csv
 
 
 class Person:
@@ -18,12 +17,16 @@ class Person:
         self._children = []
 
     def set_father(self, person):
+        if person is None:
+            return
         self._father = person
         father_children = person.children()
         if self not in father_children:
             father_children.append(self)
 
     def set_mother(self, person):
+        if person is None:
+            return
         self._mother = person
         mother_children = person.children()
         if self not in mother_children:
@@ -50,14 +53,15 @@ class Person:
 
 class Database:
     def __init__(self, people=None):
-        if people is None:
-            self._people = []
-        else:
-            self._people = people
+        self._list_of_id = []
+        self._people = []
+        if people is not None:
+            for human in people:
+                self.add_person(human)
 
     def add_person(self, person):
-        if person not in self._people:
-            self._people.append(person)
+        self._people.append(person)
+        self._list_of_id.append(person.id())
 
     def get_person_by_id(self, id):
         for person in self._people:
@@ -66,3 +70,6 @@ class Database:
 
     def people(self):
         return self._people
+
+    def list_of_id(self):
+        return self._list_of_id

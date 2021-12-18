@@ -1,0 +1,21 @@
+[
+  "test_classes.py::test_person_create_without_family",
+  "test_classes.py::test_person_create_with_family",
+  "test_classes.py::test_person_set_father",
+  "test_classes.py::test_person_set_mother",
+  "test_classes.py::test_person_get_oldest_sibling_no_parents_set",
+  "test_classes.py::test_person_get_oldest_sibling_only_child",
+  "test_classes.py::test_person_get_oldest_sibling",
+  "test_classes.py::test_database",
+  "test_classes.py::test_database_add_person",
+  "test_classes_first_task.py::test_person_create_without_family",
+  "test_classes_first_task.py::test_person_create_with_family",
+  "test_classes_first_task.py::test_person_set_father",
+  "test_classes_first_task.py::test_person_set_mother",
+  "test_classes_first_task.py::test_database",
+  "test_classes_first_task.py::test_database_add_person",
+  "test_classes_io.py::test_read_database_from_file",
+  "test_classes_io.py::test_read_database_from_file_invalid_field",
+  "test_classes_io.py::test_read_database_from_file_invalid_parent_id",
+  "test_classes_io.py::test_write_database_to_file"
+]
